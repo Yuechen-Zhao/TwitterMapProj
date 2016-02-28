@@ -70,11 +70,6 @@
     <Content Include="TwitterMapProj\static\scripts\respond.js" />
     <Content Include="TwitterMapProj\static\scripts\respond.min.js" />
     <Content Include="TwitterMapProj\static\scripts\_references.js" />
-    <Content Include="TwitterMapProj\templates\about.html" />
-    <Content Include="TwitterMapProj\templates\contact.html" />
-    <Content Include="TwitterMapProj\templates\index.html" />
-    <Content Include="TwitterMapProj\templates\layout.html" />
-    <Content Include="TwitterMapProj\templates\mainTwitterMap.css" />
     <Content Include="TwitterMapProj\templates\mainTwitterMap.html" />
   </ItemGroup>
   <ItemGroup>
