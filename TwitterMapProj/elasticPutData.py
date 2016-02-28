@@ -3,7 +3,7 @@ from pyes import *
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
-from builtins import print
+#from builtins import print
 
 #Variables that contains the user credentials to access Twitter API 
 access_token = '931455098-4cheNDFrVVjEqEwyqMEYdIfUznEUP0OZolsGvTeb'
@@ -22,8 +22,8 @@ class StdOutListener(StreamListener):
 		
 		try:
 			if('text' and 'coordinates' in data):
-				la = float(data['coordinates']['coordinates'][0])
-				lo = float(data['coordinates']['coordinates'][1])
+				lo = float(data['coordinates']['coordinates'][0])
+				la = float(data['coordinates']['coordinates'][1])
 
 				for word in keywordList:
 					if word in data['text']:
@@ -68,7 +68,7 @@ if __name__ == '__main__':
 	}
 
 	conn.indices.put_mapping("test-type", {'properties':mapping}, ["test-index"])
-	keywordList = ['sunshine','rain','snow','laugh','seashore', 'the','a']
+	keywordList = ['sunshine','rain','snow','basketball','school','love','music','mountain','happy','sushi']
 	#This is a basic listener that just prints received tweets to stdout.
 
 	#This handles Twitter authetification and the connection to Twitter Streaming API
@@ -78,7 +78,7 @@ if __name__ == '__main__':
 	stream = Stream(auth, l)
 
 	#This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
-	GEOBOX_WORLD = [-180,-90,180,90]
+	GEOBOX_WORLD = [-130,-60,70,60]
 	stream.filter(locations=GEOBOX_WORLD)
 	# stream.filter(track=keywordList)
 	# stream.filter(track=['sunshine'])
