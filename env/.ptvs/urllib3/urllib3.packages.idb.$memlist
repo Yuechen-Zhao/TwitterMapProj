@@ -1,5 +1,0 @@
-absolute_import
-ordered_dict
-__all__
-six
-ssl_match_hostname
